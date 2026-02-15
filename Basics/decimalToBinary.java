@@ -12,7 +12,6 @@ public class decimalToBinary {
             ans+=parity*pw;
             pw*=10;
             decimal_num/=2;
-
         }
         System.out.print(ans);
     }
