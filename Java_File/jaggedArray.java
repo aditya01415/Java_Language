@@ -1,5 +1,6 @@
 public class jaggedArray {
     public static void main(String[] args) {
+
         int[][] jaggedArray = new int[3][];
         jaggedArray[0] = new int[]{1, 2, 3};
         jaggedArray[1] = new int[]{4, 5};
@@ -8,6 +9,7 @@ public class jaggedArray {
             for (int j = 0; j < jaggedArray[i].length; j++) {
                 System.out.print(jaggedArray[i][j] + " ");
             }
+            
             System.out.println();
         }
         
