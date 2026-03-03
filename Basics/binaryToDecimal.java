@@ -1,6 +1,5 @@
 
 import java.util.Scanner;
-
 public class binaryToDecimal {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -13,7 +12,6 @@ public class binaryToDecimal {
             pw*=2;
         }
         System.out.print(ans);
-
         sc.close();
     }
 }
