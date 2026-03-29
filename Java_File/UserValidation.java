@@ -10,10 +10,9 @@ class InvalidInputException extends Exception {
 
 public class UserValidation {
 
-    // Method using 'throws'
     static void validateMobile(String mobile) throws InvalidInputException {
         if (!mobile.matches("\\d{10}")) {
-            // using 'throw'
+
             throw new InvalidInputException("Invalid Mobile Number! Must be 10 digits.");
         }
     }
