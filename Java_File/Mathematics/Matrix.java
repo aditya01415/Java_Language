@@ -1,40 +1,39 @@
-package Mathematics;
+package mathematics;
 
 public class Matrix {
-    int rows, cols;
-    int[][] a;
+	public int[][] add(int[][] A, int[][] B) {
+		int rows = A.length;
+		int cols = A[0].length;
+		int[][] result = new int[rows][cols];
 
-    public Matrix(int r, int c) {
-        rows = r;
-        cols = c;
-        a = new int[r][c];
-    }
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < cols; j++) {
+				result[i][j] = A[i][j] + B[i][j];
+			}
+		}
+		return result;
+	}
 
-    public void setElement(int i, int j, int val) {
-        a[i][j] = val;
-    }
+	public int[][] subtract(int[][] A, int[][] B) {
+		int rows = A.length;
+		int cols = A[0].length;
+		int[][] result = new int[rows][cols];
 
-    public Matrix add(Matrix m) {
-        Matrix res = new Matrix(rows, cols);
-        for (int i = 0; i < rows; i++)
-            for (int j = 0; j < cols; j++)
-                res.a[i][j] = a[i][j] + m.a[i][j];
-        return res;
-    }
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < cols; j++) {
+				result[i][j] = A[i][j] - B[i][j];
+			}
+		}
+		return result;
+	}
 
-    public Matrix subtract(Matrix m) {
-        Matrix res = new Matrix(rows, cols);
-        for (int i = 0; i < rows; i++)
-            for (int j = 0; j < cols; j++)
-                res.a[i][j] = a[i][j] - m.a[i][j];
-        return res;
-    }
-
-    public void display() {
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++)
-                System.out.print(a[i][j] + " ");
-            System.out.println();
-        }
-    }
+	public void display(int[][] M) {
+		for (int[] row : M) {
+			for (int val : row) {
+				System.out.print(val + " ");
+			}
+			System.out.println();
+		}
+	}
 }
+
